@@ -76,9 +76,7 @@ print("Function: uppercase")
 # Search for 'python make string uppercase'
 
 def make_uppercase(string):
-  # Return the string in uppercase
-  pass
-
+  return string.upper()
 check_that_these_are_equal(
   make_uppercase("hello"), "HELLO")
 
@@ -93,8 +91,7 @@ print("Function: lowercase")
 # Search for 'python make string lowercase'
 
 def make_lowercase(string):
-  # Return the string in lowercase
-  pass
+  return string.lower()
 
 check_that_these_are_equal(
   make_lowercase("HELLO"), "hello")
@@ -110,8 +107,7 @@ print("Function: strip_whitespace")
 # Search for 'python remove whitespace from string'
 
 def strip_whitespace(string):
-  # Return the string with any whitespace removed from the start and end
-  pass
+  return string.strip()
 
 check_that_these_are_equal(
   strip_whitespace("hello "), "hello")

@@ -93,7 +93,10 @@ add_one(add_one(add_one(add_one(add_one(add_one(1))))))
 
 # EXPRESSIONS PLAYGROUND BEGINS
 
+x = add_one(3) * 4 - 16 
+y = add_one((4) - 1) * add_one(3) - 16
 
+print(f"x {x} is equal to {y}: ", x == y)
 
 # EXPRESSIONS PLAYGROUND ENDS
 
