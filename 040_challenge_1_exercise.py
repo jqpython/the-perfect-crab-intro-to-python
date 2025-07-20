@@ -27,11 +27,30 @@ from lib.helpers import check_that_these_are_equal
 print("")
 print("Function: report_long_words")
 
-def report_long_words(words):
-  pass
+# def report_long_words(words):
+#   report = ""
+#   long_words_list = []
+#   for word in words:
+#     word_len = len(word)
+#     if word_len > 10:
+#       long_words_list.append(word)
+
+#   nohypen = []
+#   for long in long_words_list:
+#     if "-" not in long:
+#       nohypen.append(long)
+
+#   shortened = []
+#   for el in nohypen:
+#     word_len = len(el)
+#     if word_len > 15:
+#       shortened_word = el[0:15] + "..."
+#       shortened.append(shortened_word)
+#   print(shortened)
+# status : not completed due to incoherence in logic; looking forward to Kay
 
 check_that_these_are_equal(
-  report_long_words([
+  report_long_words([ # input
     'hello',
     'nonbiological',
     'Kay',

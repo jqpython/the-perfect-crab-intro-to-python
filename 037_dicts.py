@@ -17,6 +17,7 @@
 my_dictionary = {
   "String": "A sequence of characters",
   "List": "A sequence of any item",
+  "Definition": " a list words with meanings, but in context of programming a dictionary is collection of keys mapped to values"
 }
 
 # Note that:
@@ -36,7 +37,7 @@ print("  " + my_dictionary["List"])
 # @TASK: Add a definition for a "Dictionary" to our dictionary above by editing
 # the code around line 20. Then print out the value below.
 
-print("A Dictionary is:")
+print("A Dictionary is:" + my_dictionary["Definition"])
 # ...
 
 # Once you're done, move on to 038_dict_operations.py

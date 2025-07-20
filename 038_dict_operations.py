@@ -56,12 +56,24 @@ print("Function: count_words_by_length")
 # Write this function that counts the number of words by how many letters they
 # have. For example:
 
-# words:  ["hat", "cat", "I", "bird"]
+words:  ["hat", "cat", "I", "bird"]
 # result: {3: 2, 1: 1, 4: 1}
+
 # Since there are two words of length 3, etc.
 
+
+
 def count_words_by_length(words):
-  pass
+  letter_count_in_words = {}
+  for word in words:
+    word_len = len(word)
+    if word_len not in letter_count_in_words:
+      letter_count_in_words[word_len] = 1
+    else:
+      letter_count_in_words[word_len] = letter_count_in_words[word_len] + 1
+  return letter_count_in_words
+    
+
 
 check_that_these_are_equal(
   count_words_by_length(["hat", "cat", "I", "bird"]),
