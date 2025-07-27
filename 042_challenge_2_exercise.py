@@ -255,7 +255,7 @@ def get_board_size_from_user():
     Handles invalid inputs and ensures the size is within valid bounds.
     """
     MIN_BOARD_SIZE = 3
-    MAX_BOARD_SIZE = 10
+    MAX_BOARD_SIZE = 5
 
     while True:
         try:
