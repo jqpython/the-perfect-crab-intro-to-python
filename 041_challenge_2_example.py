@@ -128,12 +128,17 @@ def play_game():
   ]
   player = "X"
   while not is_game_over(board):
+    if is_game_draw(board):
+      return True
     print(print_board(board))
     print("It's " + player + "'s turn.")
     # `input` asks the user to type in a string
     # We then need to convert it to a number using `int`
     row = int(input("Enter a row: "))
     column = int(input("Enter a column: "))
+    if not is_move_valid(board, row, column):
+      print("Invalid move!")
+      continue
     board = make_move(board, row, column, player)
     if player == "X":
       player = "O"
@@ -141,6 +146,15 @@ def play_game():
       player = "X"
   print(print_board(board))
   print("Game over!")
+
+def is_move_valid(board, row, column):
+  return board[row][column] == "."
+
+def is_game_draw(board):
+  for row in board:
+    if "." in row:
+      return False
+  return True 
 
 # And try it out:
 

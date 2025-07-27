@@ -27,6 +27,45 @@ from lib.helpers import check_that_these_are_equal
 print("")
 print("Function: report_long_words")
 
+def report_long_words(words):
+  long_words = extract_long_words(words)
+  without_hypens = reject_hypen_words(long_words)
+  shortened_if_longer = shorted_very_long_words(without_hypens)
+  return format_long_words(shortened_if_longer)
+
+def extract_long_words(words):
+  long_words_list = []
+  for word in words:
+    word_len = len(word)
+    if word_len > 10:
+      long_words_list.append(word)
+  return long_words_list
+
+
+def reject_hypen_words(words):
+  nohypen = []
+  for long in words:
+    if "-" not in long:
+      nohypen.append(long)
+  return nohypen
+
+def shorted_very_long_words(words):
+  shortened = []
+  for word in words:
+    word_len = len(word)
+    if word_len > 15:
+      shortened_word = word[0:15] + "..."
+      shortened.append(shortened_word)
+    else:
+      shortened.append(word)
+  return shortened
+
+def format_long_words(words):
+  report = "These words are quite long: "
+  return report + ", ".join(words)
+
+
+
 # def report_long_words(words):
 #   report = ""
 #   long_words_list = []
@@ -47,7 +86,7 @@ print("Function: report_long_words")
 #       shortened_word = el[0:15] + "..."
 #       shortened.append(shortened_word)
 #   print(shortened)
-# status : not completed due to incoherence in logic; looking forward to Kay
+# status : not completed due to incoherent logic; looking forward to Kay
 
 check_that_these_are_equal(
   report_long_words([ # input
